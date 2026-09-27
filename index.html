@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - VoiceParty (Google Play Compliant)</title>
+  <meta name="description" content="Official Google Play Console Compliant Privacy Policy for VoiceParty live voice streaming, social networking, and gaming application.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-primary: #0a0c16;
+      --bg-secondary: #131728;
+      --bg-card: rgba(26, 32, 56, 0.7);
+      --border-color: rgba(255, 255, 255, 0.08);
+      --accent-purple: #8b5cf6;
+      --accent-pink: #ec4899;
+      --accent-blue: #3b82f6;
+      --accent-green: #10b981;
+      --text-main: #f3f4f6;
+      --text-muted: #9ca3af;
+      --text-dim: #6b7280;
+      --gradient-accent: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+      --gradient-card: linear-gradient(180deg, rgba(30, 37, 65, 0.6) 0%, rgba(19, 23, 40, 0.8) 100%);
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-primary);
+      color: var(--text-main);
+      line-height: 1.6;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      top: -200px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 1000px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, rgba(236, 72, 153, 0.08) 40%, rgba(10, 12, 22, 0) 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(10, 12, 22, 0.85);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-color);
+      padding: 16px 24px;
+    }
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .brand-logo {
+      width: 40px; height: 40px; border-radius: 12px;
+      background: var(--gradient-accent); display: flex;
+      align-items: center; justify-content: center;
+      font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 20px; color: #fff;
+      box-shadow: 0 4px 14px rgba(139, 92, 246, 0.4);
+    }
+    .brand-title {
+      font-family: 'Outfit', sans-serif; font-size: 22px; font-weight: 700;
+      background: var(--gradient-accent); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px;
+      border-radius: 10px; font-size: 14px; font-weight: 600; cursor: pointer;
+      text-decoration: none; transition: all 0.2s ease; border: none;
+    }
+    .btn-secondary { background: rgba(255, 255, 255, 0.06); color: var(--text-main); border: 1px solid var(--border-color); }
+    .btn-secondary:hover { background: rgba(255, 255, 255, 0.12); border-color: rgba(255, 255, 255, 0.2); }
+    
+    .container {
+      max-width: 1200px; margin: 0 auto; padding: 40px 24px 80px;
+      display: grid; grid-template-columns: 280px 1fr; gap: 40px; position: relative; z-index: 1;
+    }
+    .sidebar { position: sticky; top: 90px; height: fit-content; max-height: calc(100vh - 120px); overflow-y: auto; padding-right: 8px; }
+    .toc-title { font-size: 12px; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; color: var(--text-dim); margin-bottom: 16px; }
+    .toc-list { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+    .toc-item a { display: block; padding: 8px 12px; border-radius: 8px; font-size: 13.5px; color: var(--text-muted); text-decoration: none; transition: all 0.2s ease; }
+    .toc-item a:hover { color: #fff; background: rgba(255, 255, 255, 0.05); }
+    .toc-item.active a { color: #fff; background: rgba(139, 92, 246, 0.15); border-left: 3px solid var(--accent-purple); font-weight: 600; }
+
+    .hero {
+      background: var(--gradient-card); border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg); padding: 36px; margin-bottom: 32px; position: relative; overflow: hidden;
+    }
+    .badge {
+      display: inline-block; padding: 6px 12px; border-radius: 20px;
+      background: rgba(16, 185, 129, 0.15); color: #6ee7b7; border: 1px solid rgba(16, 185, 129, 0.3);
+      font-size: 12px; font-weight: 600; margin-bottom: 16px;
+    }
+    .hero-title { font-family: 'Outfit', sans-serif; font-size: 34px; font-weight: 700; margin-bottom: 12px; color: #fff; }
+    .hero-meta { display: flex; gap: 16px; color: var(--text-muted); font-size: 14px; flex-wrap: wrap; }
+
+    .section-card {
+      background: var(--gradient-card); border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg); padding: 32px; margin-bottom: 28px; scroll-margin-top: 100px;
+    }
+    .section-num { font-family: 'Outfit', sans-serif; font-size: 13px; font-weight: 700; color: var(--accent-purple); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
+    .section-title { font-family: 'Outfit', sans-serif; font-size: 24px; font-weight: 700; color: #fff; margin-bottom: 16px; }
+    p { color: var(--text-muted); margin-bottom: 16px; font-size: 15px; }
+    ul, ol { color: var(--text-muted); padding-left: 20px; margin-bottom: 16px; font-size: 15px; }
+    li { margin-bottom: 8px; }
+    strong { color: var(--text-main); }
+
+    .alert { padding: 20px; border-radius: var(--radius-md); margin: 20px 0; display: flex; gap: 16px; align-items: flex-start; }
+    .alert-important { background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(139, 92, 246, 0.3); }
+    .alert-green { background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); }
+    .alert-icon { font-size: 22px; line-height: 1; }
+    .alert-content { font-size: 14px; color: var(--text-main); }
+
+    .table-wrapper { overflow-x: auto; margin: 20px 0; border: 1px solid var(--border-color); border-radius: var(--radius-md); }
+    table { width: 100%; border-collapse: collapse; text-align: left; font-size: 14px; }
+    th { background: rgba(255, 255, 255, 0.04); color: var(--text-main); padding: 14px 18px; font-weight: 600; border-bottom: 1px solid var(--border-color); }
+    td { padding: 14px 18px; color: var(--text-muted); border-bottom: 1px solid rgba(255, 255, 255, 0.04); }
+    code { background: rgba(255, 255, 255, 0.08); color: #c4b5fd; padding: 2px 6px; border-radius: 4px; font-family: monospace; font-size: 13px; }
+
+    .footer { border-top: 1px solid var(--border-color); padding: 40px 24px; text-align: center; color: var(--text-dim); font-size: 14px; }
+    .footer a { color: var(--text-muted); text-decoration: none; }
+    .footer a:hover { color: var(--accent-purple); }
+
+    @media (max-width: 900px) {
+      .container { grid-template-columns: 1fr; }
+      .sidebar { display: none; }
+      .hero-title { font-size: 26px; }
+      .section-card { padding: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#" class="brand">
+        <div class="brand-logo">VP</div>
+        <span class="brand-title">VoiceParty</span>
+      </a>
+      <div class="nav-actions">
+        <button class="btn btn-secondary" onclick="window.print()">
+          <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M2.5 8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z"/>
+            <path d="M5 1a2 2 0 0 0-2 2v2H2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1v1a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-1h1a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1V3a2 2 0 0 0-2-2H5zm7 4v2H4V3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1zm1 3a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v-2a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v2H3a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h10z"/>
+          </svg>
+          Print Policy
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Container -->
+  <div class="container">
+    
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="toc-title">Policy Sections</div>
+      <ul class="toc-list">
+        <li class="toc-item active"><a href="#sec-datasafety">Google Play Data Safety</a></li>
+        <li class="toc-item"><a href="#sec-1">1. Information We Collect</a></li>
+        <li class="toc-item"><a href="#sec-2">2. Google Play Permissions</a></li>
+        <li class="toc-item"><a href="#sec-3">3. Audio Privacy Guarantees</a></li>
+        <li class="toc-item"><a href="#sec-4">4. How We Use Data</a></li>
+        <li class="toc-item"><a href="#sec-5">5. Virtual Economy & Games</a></li>
+        <li class="toc-item"><a href="#sec-6">6. Data Sharing & Disclosure</a></li>
+        <li class="toc-item"><a href="#sec-7">7. Third-Party Integrations</a></li>
+        <li class="toc-item"><a href="#sec-8">8. Security & Encryption</a></li>
+        <li class="toc-item"><a href="#sec-deletion">9. Account Deletion Policy</a></li>
+        <li class="toc-item"><a href="#sec-10">10. Children's Privacy</a></li>
+        <li class="toc-item"><a href="#sec-11">11. Your Rights (GDPR/CCPA)</a></li>
+        <li class="toc-item"><a href="#sec-13">12. Contact & Support</a></li>
+      </ul>
+    </aside>
+
+    <!-- Content -->
+    <main class="content">
+
+      <!-- Hero Banner -->
+      <section class="hero">
+        <span class="badge">Google Play Console Compliant</span>
+        <h1 class="hero-title">Privacy Policy for VoiceParty</h1>
+        <div class="hero-meta">
+          <span><strong>Effective Date:</strong> September 27, 2026</span>
+          <span>•</span>
+          <span><strong>Google Play Policy Version:</strong> 2.4.0</span>
+        </div>
+      </section>
+
+      <!-- Google Play Data Safety Summary -->
+      <section id="sec-datasafety" class="section-card">
+        <div class="section-num">Google Play Console Requirement</div>
+        <h2 class="section-title">Data Safety & Declarations Summary</h2>
+        <p>This summary matches the official Google Play Data Safety form for VoiceParty:</p>
+        
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Data Type</th>
+                <th>Collected?</th>
+                <th>Shared?</th>
+                <th>Primary Purpose</th>
+                <th>Storage / Ephemeral</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Audio & Live Mic</strong></td>
+                <td>Yes</td>
+                <td>No</td>
+                <td>Live voice room streaming</td>
+                <td><strong style="color:#6ee7b7;">Ephemeral (Never Stored)</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Personal Info (Email, Name, User ID)</strong></td>
+                <td>Yes</td>
+                <td>No</td>
+                <td>Account creation & auth</td>
+                <td>Stored in database</td>
+              </tr>
+              <tr>
+                <td><strong>In-App Messages & Chat</strong></td>
+                <td>Yes</td>
+                <td>No</td>
+                <td>User communication & rooms</td>
+                <td>Stored in database</td>
+              </tr>
+              <tr>
+                <td><strong>Photos (Avatars/Wallpapers)</strong></td>
+                <td>Optional</td>
+                <td>No</td>
+                <td>Profile & room customization</td>
+                <td>Stored in Supabase Storage</td>
+              </tr>
+              <tr>
+                <td><strong>Financial / Coin Purchases</strong></td>
+                <td>Yes</td>
+                <td>No</td>
+                <td>In-app economy & VIPs</td>
+                <td><strong>Handled by Google Play</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Device & Other IDs (Android ID)</strong></td>
+                <td>Yes</td>
+                <td>No</td>
+                <td>Security & anti-fraud</td>
+                <td>Stored in database</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="alert alert-green">
+          <div class="alert-icon">🔒</div>
+          <div class="alert-content">
+            <strong>Security & Privacy Guarantees:</strong><br>
+            • All data is encrypted in transit using HTTPS, TLS 1.3, WSS, and WebRTC (DTLS-SRTP).<br>
+            • Users can request full account and data deletion in-app or via web request without app re-installation.
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 1 -->
+      <section id="sec-1" class="section-card">
+        <div class="section-num">Section 01</div>
+        <h2 class="section-title">Information We Collect</h2>
+        <ul>
+          <li><strong>Personal Details:</strong> Email (for Email OTP), Google account profile info (for Google Sign-In), display name, username, gender, date of birth, and avatar picture.</li>
+          <li><strong>Social & Intimacy:</strong> CP partner status, Sibling connections, Family clan memberships, badges, avatar frames, and follower/following lists.</li>
+          <li><strong>Virtual Currency & In-App Economy:</strong> Virtual coin purchases, gift ledgers, reseller transfers, and VIP tiers. <em>Monetary payments are handled exclusively by Google Play Store Billing.</em></li>
+        </ul>
+      </section>
+
+      <!-- Section 2 -->
+      <section id="sec-2" class="section-card">
+        <div class="section-num">Section 02</div>
+        <h2 class="section-title">Google Play Permissions Requested</h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Permission</th>
+                <th>Identifier</th>
+                <th>Google Play Purpose Scope</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Microphone</strong></td>
+                <td><code>RECORD_AUDIO</code><br><code>MODIFY_AUDIO_SETTINGS</code></td>
+                <td>Used strictly for live voice room streaming. Audio is <strong>never recorded or saved</strong>.</td>
+              </tr>
+              <tr>
+                <td><strong>Photos & Media</strong></td>
+                <td><code>READ_MEDIA_IMAGES</code></td>
+                <td>Used only when uploading custom avatars, room wallpapers, or moment photos.</td>
+              </tr>
+              <tr>
+                <td><strong>Notifications</strong></td>
+                <td><code>POST_NOTIFICATIONS</code></td>
+                <td>Sends alerts for room invites, DMs, CP requests, and system updates.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 3 -->
+      <section id="sec-3" class="section-card">
+        <div class="section-num">Section 03</div>
+        <h2 class="section-title">Audio Privacy & Microphone Guarantees</h2>
+        <div class="alert alert-important">
+          <div class="alert-icon">🎙️</div>
+          <div class="alert-content">
+            <strong>STRICT AUDIO POLICY DISCLOSURE:</strong><br>
+            Live voice streaming is powered by WebRTC (LiveKit). Voice audio passes ephemerally through volatile RAM to enable real-time communication. We <strong>DO NOT record, store, archive, or sell live voice conversations</strong>. Microphone data is never used for advertising or marketing.
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4 & 5 -->
+      <section id="sec-4" class="section-card">
+        <div class="section-num">Section 04 & 05</div>
+        <h2 class="section-title">How We Use Data & Mini-Games</h2>
+        <p>Data is used strictly to run voice rooms, update CP intimacy meters, process atomic coin debits for gifts, power embedded webview games (Greedy Animal Wheel, Lucky 77, Food Wheel Party), and prevent fraud.</p>
+      </section>
+
+      <!-- Section 6 & 7 -->
+      <section id="sec-6" class="section-card">
+        <div class="section-num">Section 06 & 07</div>
+        <h2 class="section-title">Data Sharing & Third-Party SDKs</h2>
+        <p>We <strong>do not sell your data</strong>. Trusted service providers include:</p>
+        <ul>
+          <li><strong>LiveKit:</strong> WebRTC voice streaming infrastructure.</li>
+          <li><strong>Supabase:</strong> Database management, auth, and CDC real-time mapping.</li>
+          <li><strong>Google Sign-In:</strong> OAuth 2.0 authentication.</li>
+          <li><strong>Expo & Railway:</strong> Push notifications & cloud hosting.</li>
+        </ul>
+      </section>
+
+      <!-- Account Deletion Policy Section -->
+      <section id="sec-deletion" class="section-card">
+        <div class="section-num">Google Play Account Deletion Policy</div>
+        <h2 class="section-title">Account & Data Deletion Instructions</h2>
+        <p>In full compliance with Google Play Developer Policy, users can request complete account and data deletion at any time:</p>
+        
+        <h3>Method 1: In-App Deletion</h3>
+        <ol>
+          <li>Open VoiceParty App &rarr; Go to <strong>Profile</strong> &rarr; <strong>Settings</strong> &rarr; <strong>Account & Security</strong>.</li>
+          <li>Tap <strong>Delete Account</strong> and confirm.</li>
+        </ol>
+
+        <h3 style="margin-top: 16px;">Method 2: Web & Email Deletion Request (No App Required)</h3>
+        <p>Send an email to <code>privacy@voiceparty.com</code> or <code>support@voiceparty.com</code> with the subject <strong>"Google Play Account Deletion Request"</strong> along with your registered email and username. Your account, profile, photos, and chat history will be permanently deleted within 30 days.</p>
+      </section>
+
+      <!-- Section 10 & 11 -->
+      <section id="sec-10" class="section-card">
+        <div class="section-num">Section 10 & 11</div>
+        <h2 class="section-title">Children's Privacy (13+) & User Rights</h2>
+        <p>VoiceParty is strictly for users <strong>13 years or older</strong> (18+ where required by law). Under GDPR and CCPA, users can access, correct, or request deletion of their personal data.</p>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="sec-13" class="section-card">
+        <div class="section-num">Section 12</div>
+        <h2 class="section-title">Contact & Developer Information</h2>
+        <ul>
+          <li><strong>Privacy Contact:</strong> <code>privacy@voiceparty.com</code></li>
+          <li><strong>Support Email:</strong> <code>support@voiceparty.com</code></li>
+          <li><strong>Safety Email:</strong> <code>safety@voiceparty.com</code></li>
+          <li><strong>Web Server:</strong> <a href="https://voiceparty-production-7818.up.railway.app" style="color: var(--accent-purple);">VoiceParty Production Server</a></li>
+        </ul>
+      </section>
+
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>&copy; 2026 VoiceParty. All rights reserved. | Google Play is a trademark of Google LLC.</p>
+  </footer>
+
+</body>
+</html>
